@@ -301,6 +301,48 @@ STUDENTS_PER_CLASSROOM: Final[int] = 20
 DISTANCE_TO_TOWN: Final[int] = 5
 POLLUTION_QUANTILE: Final[float] = 0.75
 POVERTY_QUANTILE: Final[float] = 0.25
+VALUATION_CHANGED_FEATURES: Final[tuple[str, ...]] = (
+    COL_RM,
+    COL_PTRATIO,
+    COL_DIS,
+    COL_CHAS,
+    COL_NOX,
+    COL_LSTAT,
+)
+VALUATION_FEATURE_LABELS: Final[tuple[str, ...]] = (
+    "RM (rooms)",
+    "PTRATIO (students per teacher)",
+    "DIS (distance to town)",
+    "CHAS (next to river)",
+    "NOX (pollution)",
+    "LSTAT (poverty)",
+)
+AVERAGE_PROPERTY_LABEL: Final[str] = "Average property"
+DESCRIBED_PROPERTY_LABEL: Final[str] = "Described property"
+FEATURE_COLUMN_LABEL: Final[str] = "Feature"
+## @}
+
+## @name Step 6 picture
+## @{
+VALUATION_PANEL_TITLE: Final[str] = (
+    "Valuation with the log model: log estimate {average_log:.2f} for the "
+    "average property, {described_log:.2f} for the described property"
+)
+VALUATION_PANEL_TITLE_FONT_SIZE: Final[int] = 14
+VALUATION_PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (13.0, 6.0)
+VALUATION_PANEL_WIDTH_RATIOS: Final[tuple[float, float]] = (1.0, 1.35)
+VALUATION_BARS_TITLE: Final[str] = "Estimated value in dollars"
+VALUATION_BARS_Y_LABEL: Final[str] = "Estimated value ($)"
+VALUATION_DOLLAR_FORMAT: Final[str] = "${value:,.0f}"
+VALUATION_AXIS_FORMAT: Final[str] = "${x:,.0f}"
+VALUATION_BAR_WIDTH: Final[float] = 0.55
+VALUATION_BAR_LABEL_FONT_SIZE: Final[int] = 14
+VALUATION_BAR_HEADROOM: Final[float] = 1.12
+VALUATION_TABLE_TITLE: Final[str] = "Characteristics that change"
+VALUATION_TABLE_FONT_SIZE: Final[int] = 11
+VALUATION_TABLE_ROW_SCALE: Final[float] = 1.9
+VALUATION_TABLE_DECIMALS: Final[int] = 2
+VALUATION_TABLE_COLUMN_WIDTHS: Final[tuple[float, float, float]] = (0.45, 0.26, 0.29)
 ## @}
 
 ## @name Step pictures

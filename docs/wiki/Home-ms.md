@@ -14,5 +14,6 @@ Hari ke-81 *100 Days of Code* Udemy: anda ialah penganalisis di sebuah syarikat 
 | [Langkah 3: Hubungan dalam data](Step-3-Relationships-ms) | Ciri manakah bergerak bersama, dan apa yang anda jangka sebelum membina model? |
 | [Langkah 4: Pembahagian dan regresi berbilang pemboleh ubah](Step-4-Regression-ms) | Mengapa kita membahagi data, cara memadankan regresi, dan cara membaca pekali serta reja |
 | [Langkah 5: Penjelmaan log](Step-5-Log-Model-ms) | Bolehkah penjelmaan log harga memberi padanan lebih baik, dan bagaimana kita membandingkan model pada data yang belum dilihat? |
+| [Langkah 6: Menilai sebuah hartanah](Step-6-Valuation-ms) | Bagaimana anda menggunakan model untuk menilai rumah purata dan rumah yang anda huraikan? |
 
 Soalan tugasan: bolehkah ciri sebuah rumah meramalkan harganya, sejauh mana baiknya model pada rumah yang belum dilihatnya, dan adakah penjelmaan log harga menjadikannya lebih baik?

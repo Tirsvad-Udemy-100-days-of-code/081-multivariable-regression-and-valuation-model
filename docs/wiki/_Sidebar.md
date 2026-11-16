@@ -7,6 +7,7 @@
 - [Step 3 Relationships](Step-3-Relationships)
 - [Step 4 Regression](Step-4-Regression)
 - [Step 5 Log Model](Step-5-Log-Model)
+- [Step 6 Valuation](Step-6-Valuation)
 
 **Languages**
 

@@ -159,6 +159,33 @@ def test_step_5_log_model_is_written_as_png(tmp_path: Path) -> None:
     assert path.stat().st_size < MAX_STEP_5_PICTURE_BYTES
 
 
+def test_pictures_include_step_6_valuation() -> None:
+    """@brief The valuation picture is registered under its picture name."""
+    assert constants.STEP_PICTURES[6] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[6] == "step-6-valuation.png"
+    assert screenshots.PICTURES[constants.STEP_PICTURES[6]] is (
+        screenshots.step_6_valuation
+    )
+
+
+def test_step_6_valuation_draws_bars_and_table_with_the_log_estimates() -> None:
+    """@brief The step 6 picture is a bar chart and a table with a title."""
+    fig = screenshots.step_6_valuation()
+    try:
+        assert len(fig.axes) == 2
+        assert "3.03" in fig.get_suptitle()
+        assert "3.25" in fig.get_suptitle()
+    finally:
+        plt.close(fig)
+
+
+def test_step_6_valuation_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 6 picture is saved as a real, reasonably small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[6], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_PICTURE_BYTES
+
+
 def test_overview_figure_has_one_axis() -> None:
     """@brief The overview is drawn on a single axis."""
     fig = screenshots.overview_figure()
