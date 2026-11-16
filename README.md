@@ -36,6 +36,7 @@ The project turns the notebook into seven steps. Each step has code in `src/bost
 | Step | Wiki page | Picture |
 | --- | --- | --- |
 | Getting started | [Getting started][wiki-getting-started] | The commands for Windows and Linux |
+| Step 1: Goals and data exploration | [Step 1: Goals and data exploration](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-1-Goals-And-Data) | ![Step 1: descriptive statistics of the Boston house price data](docs/images/step-1-goals.png) |
 
 The data and the notebooks come from the course resources and are used here for personal study; the rights stay with the course author. The data column `B` encodes a racial proportion of the town. It stays because the assignment uses it, and a model that uses it should not be put to real use.
 

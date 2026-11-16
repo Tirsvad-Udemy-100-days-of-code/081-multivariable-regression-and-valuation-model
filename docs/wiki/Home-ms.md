@@ -9,5 +9,6 @@ Hari ke-81 *100 Days of Code* Udemy: anda ialah penganalisis di sebuah syarikat 
 | Halaman | Apa yang anda perolehi |
 | --- | --- |
 | [Bermula](Getting-Started-ms) | `.venv`, pemasangan, dan cara menjalankan, menguji serta memeriksa projek di Linux dan Windows |
+| [Langkah 1: Matlamat dan penerokaan data](Step-1-Goals-And-Data-ms) | Apakah tugasnya, apa yang ada dalam data Boston, adakah ia bersih, dan apa kata statistik deskriptif |
 
 Soalan tugasan: bolehkah ciri sebuah rumah meramalkan harganya, sejauh mana baiknya model pada rumah yang belum dilihatnya, dan adakah penjelmaan log harga menjadikannya lebih baik?

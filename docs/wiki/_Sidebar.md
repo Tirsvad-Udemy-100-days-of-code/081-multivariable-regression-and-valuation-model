@@ -2,6 +2,7 @@
 
 - [Home](Home)
 - [Getting Started](Getting-Started)
+- [Step 1 Goals and Data](Step-1-Goals-And-Data)
 
 **Languages**
 
