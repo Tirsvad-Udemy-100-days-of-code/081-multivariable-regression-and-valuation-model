@@ -9,7 +9,7 @@ from typing import Final
 
 ## @name Data file
 ## @{
-DATA_PACKAGE: Final[str] = "boston_valuation.data"
+DATA_DIR: Final[str] = "data"
 DATA_FILE: Final[str] = "boston.csv"
 INDEX_COLUMN: Final[int] = 0
 ## @}

@@ -1,6 +1,5 @@
 """@brief Read the Boston house price table from a CSV file."""
 
-from importlib import resources
 from pathlib import Path
 
 import pandas as pd
@@ -22,6 +21,5 @@ def load_data() -> pd.DataFrame:
 
     @return The 506 rows and 14 columns of the Boston data.
     """
-    source = resources.files(constants.DATA_PACKAGE) / constants.DATA_FILE
-    with resources.as_file(source) as path:
-        return load_data_from(path)
+    package_root = Path(__file__).resolve().parents[1]
+    return load_data_from(package_root / constants.DATA_DIR / constants.DATA_FILE)

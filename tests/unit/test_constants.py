@@ -1,19 +1,20 @@
 """@brief Tests for the constants and the shipped data file."""
 
-from importlib import resources
-from importlib.resources.abc import Traversable
+from pathlib import Path
 
 import pandas as pd
 
+import boston_valuation
 from boston_valuation import constants
 
 
-def _data_file() -> Traversable:
+def _data_file() -> Path:
     """@brief Locate the shipped CSV file.
 
     @return The data file inside the package.
     """
-    return resources.files(constants.DATA_PACKAGE).joinpath(constants.DATA_FILE)
+    package_root = Path(boston_valuation.__file__).resolve().parent
+    return package_root / constants.DATA_DIR / constants.DATA_FILE
 
 
 def _read_data() -> pd.DataFrame:
@@ -21,8 +22,7 @@ def _read_data() -> pd.DataFrame:
 
     @return The raw table with its index column.
     """
-    with resources.as_file(_data_file()) as path:
-        return pd.read_csv(path, index_col=constants.INDEX_COLUMN)
+    return pd.read_csv(_data_file(), index_col=constants.INDEX_COLUMN)
 
 
 def test_feature_columns_count_is_thirteen() -> None:

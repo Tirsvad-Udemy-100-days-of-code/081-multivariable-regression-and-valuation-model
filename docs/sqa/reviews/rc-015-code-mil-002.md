@@ -32,7 +32,7 @@
 | 4 | Every function and method signature is type-annotated, including `-> None` | Pass | Every signature is annotated, `-> None` included. |
 | 5 | No bare `except:`, no swallowed exceptions; specific exceptions are raised and the cause is kept (`raise ... from`) | Pass | No bare or swallowed exceptions; specific exceptions are raised. |
 | 6 | No mutable default arguments and no shadowed builtins | Pass | No mutable defaults; no builtin shadowed (ruff B rules pass). |
-| 7 | Files, locks and connections are managed with context managers | Pass | Files are opened through `importlib.resources` and `pathlib` context handling, figures are closed after saving. |
+| 7 | Files, locks and connections are managed with context managers | Pass | Files are read through `pathlib` paths and pandas, never left open, figures are closed after saving. |
 | 8 | Public modules, classes and functions have docstrings that say what, not how | Pass | Doxygen docstrings (@brief, @param, @return) on every public module and function. |
 | 9 | Logging uses `logging`, not `print`; no secrets or personal data in log output | Pass | `logging` is used, never `print`; no secrets or personal data are logged. |
 | 10 | Classes and operations trace to the Design Class Diagram they implement; deviations are recorded | N-A | N-A by ADR-0001: no Design Class Diagram exists; functions implement the milestone tasks directly. |
