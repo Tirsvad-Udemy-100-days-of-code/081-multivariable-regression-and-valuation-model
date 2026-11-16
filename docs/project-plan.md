@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version<br>Reviewed in RC-012: Go | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version<br>Reviewed in RC-012: Go | [0e1081d] |
 
 ---
 
@@ -103,3 +103,4 @@ MIL-001 → MIL-002 → MIL-003 → MIL-004 → MIL-005 → MIL-006 → MIL-007 
 [MIL-006]: ./milestones/mil-006-step-5-log-transformation.md
 [MIL-007]: ./milestones/mil-007-step-6-valuation.md
 [MIL-008]: ./milestones/mil-008-lecture-598-summary-release.md
+[0e1081d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/0e1081ddb340d222e4fb986725d5a7feef19e5f8

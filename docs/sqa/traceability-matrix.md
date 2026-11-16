@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version<br>Accepted with the baseline; maintained by the AI as stand-in for S01 | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version<br>Accepted with the baseline; maintained by the AI as stand-in for S01 | [0e1081d] |
 
 ---
 
@@ -33,7 +33,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 | [MIL-007] | MIL | en | it | [BC-001], [MIL-006] | [MIL-008] | [RC-009] |
 | [MIL-008] | MIL | en | it | [BC-001], [MIL-007] | - | [RC-010] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | - | [RC-011] |
-| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | pending |
+| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [0e1081d] |
 
 ## Concern Coverage
 
@@ -84,3 +84,4 @@ Tracks backward and forward links between artifact instances so that traceabilit
 [RC-010]: ./reviews/rc-010-mil-008.md
 [RC-011]: ./reviews/rc-011-adr-0001.md
 [RC-012]: ./reviews/rc-012-project-plan.md
+[0e1081d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/0e1081ddb340d222e4fb986725d5a7feef19e5f8

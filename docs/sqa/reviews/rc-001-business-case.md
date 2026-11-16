@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version | pending |
+| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version | [0e1081d] |
 
 ---
 
@@ -63,3 +63,4 @@ Go — every criterion of QC-BC-001 and QC-LANG-001 is Pass or N-A; there is no 
 [BC-001]: ../../business-case.md
 [QC-BC-001]: ../../../framework/qc/artifacts/qc-business-case.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[0e1081d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/0e1081ddb340d222e4fb986725d5a7feef19e5f8
