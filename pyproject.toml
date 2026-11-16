@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multivariable-regression-and-valuation-model"
+version = "0.1.0"
+description = "Udemy 100 Days of Code, Day 81: a multivariable regression that values Boston houses, built with pandas, Seaborn, Plotly and scikit-learn."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "AGPL-3.0-only"
+dependencies = [
+    "pandas>=2.2.3",
+    "numpy>=2.1",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "plotly>=5.24",
+    "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.8",
+]
+notebook = [
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model"
+Wiki = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki"
+Issues = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+boston_valuation = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "slow: tests that draw large figures",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "N"]
