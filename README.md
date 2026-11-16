@@ -41,6 +41,7 @@ The project turns the notebook into seven steps. Each step has code in `src/bost
 | Step 3: Relationships | [Step 3: Relationships](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-3-Relationships) | ![Step 3: five relationships and the correlation of every feature with the price](docs/images/step-3-relationships.png) |
 | Step 4: Split and regression | [Step 4: Split and regression](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-4-Regression) | ![Step 4: actual against predicted prices, residuals and their distribution](docs/images/step-4-regression.png) |
 | Step 5: Log transformation | [Step 5: Log transformation](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-5-Log-Model) | ![Step 5: the linear model and the log price model side by side](docs/images/step-5-log-model.png) |
+| Step 6: Valuation | [Step 6: Valuation](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-6-Valuation) | ![Step 6: the estimated value of the average and the described property](docs/images/step-6-valuation.png) |
 
 The data and the notebooks come from the course resources and are used here for personal study; the rights stay with the course author. The data column `B` encodes a racial proportion of the town. It stays because the assignment uses it, and a model that uses it should not be put to real use.
 
