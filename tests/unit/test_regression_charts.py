@@ -181,6 +181,30 @@ def test_residuals_vs_predicted_has_labels_and_no_identity_line(
     assert len(ax.lines) == 0
 
 
+def test_residuals_vs_predicted_accepts_title_and_x_label_for_the_log_model(
+    predicted: NDArray[np.float64], errors: pd.Series
+) -> None:
+    """@brief Title and horizontal label can be replaced."""
+    fig = charts.residuals_vs_predicted_figure(
+        predicted,
+        errors,
+        colour=constants.COLOR_LOG_MODEL,
+        title="Log",
+        x_label="x",
+    )
+    try:
+        ax = _only_axis(fig)
+        face = tuple(ax.collections[0].get_facecolor()[0][:3])
+        assert face == pytest.approx(to_rgb(constants.COLOR_LOG_MODEL))
+        assert (ax.get_title(), ax.get_xlabel(), ax.get_ylabel()) == (
+            "Log",
+            "x",
+            "Residuals",
+        )
+    finally:
+        plt.close(fig)
+
+
 def test_residual_distribution_title_carries_skew_and_mean() -> None:
     """@brief The title reports both figures rounded to two decimals."""
     values = pd.Series([0.0, 0.0, 0.0, 1.0, 8.0])

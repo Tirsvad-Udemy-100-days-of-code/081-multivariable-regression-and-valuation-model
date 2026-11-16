@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-017 for the MIL-004 code | [c164920] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-018 for the MIL-005 code | [2e0fa37] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-018 for the MIL-005 code | [2e0fa37] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-019 for the MIL-006 code | [9cbd308] |
 
 ---
 
@@ -35,7 +35,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 | [MIL-008] | MIL | en | it | [BC-001], [MIL-007] | - | [RC-010] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | - | [RC-011] |
 | [ADR-0002] | ADR | - | - | [BC-001], [ADR-0001] | - | [RC-013] |
-| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [RC-014], [RC-015], [RC-016], [RC-017], [RC-018] |
+| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [RC-014], [RC-015], [RC-016], [RC-017], [RC-018], [RC-019] |
 
 ## Concern Coverage
 
@@ -92,6 +92,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 [RC-015]: ./reviews/rc-015-code-mil-002.md
 [RC-016]: ./reviews/rc-016-code-mil-003.md
 [RC-017]: ./reviews/rc-017-code-mil-004.md
-[c164920]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/c1649208bd12a1d006e1434ae1359b6eaff934af
 [RC-018]: ./reviews/rc-018-code-mil-005.md
 [2e0fa37]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/2e0fa379ad92ce85270057bf9ea16d1509135cd8
+[RC-019]: ./reviews/rc-019-code-mil-006.md
+[9cbd308]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/9cbd308a1a5390126223e3f78a42467bb77adb50
