@@ -11,7 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version<br>Reviewed in RC-012: Go | [0e1081d] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version<br>Reviewed in RC-012: Go | [0e1081d] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Milestone column links the synced milestones<br>Reviewed in RC-023: Go | pending |
 
 ---
 
@@ -33,14 +34,14 @@ This plan schedules the eight gateways that take the Day 81 course assignment (l
 
 | Gateway | Document | Window | Decision date | Owner | Stories | Main deliverable | Milestone |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation | [MIL-001] | 2026-11-16 to 2026-11-17 | 2026-11-17 | S01 | none (technical tasks, [ADR-0001]) | Skeleton, tooling, data, README, Getting Started wiki, repository metadata | not yet synced |
-| Step 1: goals and data exploration (lecture 597) | [MIL-002] | 2026-11-17 | 2026-11-17 | S01 | none (technical tasks, [ADR-0001]) | Loader, exploration, descriptive statistics | not yet synced |
-| Step 2: feature distributions | [MIL-003] | 2026-11-18 | 2026-11-18 | S01 | none (technical tasks, [ADR-0001]) | Price, distance, rooms, highway and river charts | not yet synced |
-| Step 3: relationships | [MIL-004] | 2026-11-19 | 2026-11-19 | S01 | none (technical tasks, [ADR-0001]) | Pair plot and five joint plots | not yet synced |
-| Step 4: split and regression | [MIL-005] | 2026-11-20 | 2026-11-20 | S01 | none (technical tasks, [ADR-0001]) | 80/20 split, regression, coefficients, residuals | not yet synced |
-| Step 5: log transformation | [MIL-006] | 2026-11-21 | 2026-11-21 | S01 | none (technical tasks, [ADR-0001]) | Log model, comparison, out-of-sample r-squared | not yet synced |
-| Step 6: valuation | [MIL-007] | 2026-11-22 | 2026-11-22 | S01 | none (technical tasks, [ADR-0001]) | Estimated value of the average and the described property | not yet synced |
-| Step 7: summary and release (lecture 598) | [MIL-008] | 2026-11-23 | 2026-11-23 | S01 | none (technical tasks, [ADR-0001]) | Learning points, published wiki, release v1.0.0 | not yet synced |
+| Foundation | [MIL-001] | 2026-11-16 to 2026-11-17 | 2026-11-17 | S01 | none (technical tasks, [ADR-0001]) | Skeleton, tooling, data, README, Getting Started wiki, repository metadata | [MIL-001 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/602) |
+| Step 1: goals and data exploration (lecture 597) | [MIL-002] | 2026-11-17 | 2026-11-17 | S01 | none (technical tasks, [ADR-0001]) | Loader, exploration, descriptive statistics | [MIL-002 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/603) |
+| Step 2: feature distributions | [MIL-003] | 2026-11-18 | 2026-11-18 | S01 | none (technical tasks, [ADR-0001]) | Price, distance, rooms, highway and river charts | [MIL-003 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/604) |
+| Step 3: relationships | [MIL-004] | 2026-11-19 | 2026-11-19 | S01 | none (technical tasks, [ADR-0001]) | Pair plot and five joint plots | [MIL-004 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/605) |
+| Step 4: split and regression | [MIL-005] | 2026-11-20 | 2026-11-20 | S01 | none (technical tasks, [ADR-0001]) | 80/20 split, regression, coefficients, residuals | [MIL-005 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/606) |
+| Step 5: log transformation | [MIL-006] | 2026-11-21 | 2026-11-21 | S01 | none (technical tasks, [ADR-0001]) | Log model, comparison, out-of-sample r-squared | [MIL-006 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/607) |
+| Step 6: valuation | [MIL-007] | 2026-11-22 | 2026-11-22 | S01 | none (technical tasks, [ADR-0001]) | Estimated value of the average and the described property | [MIL-007 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/608) |
+| Step 7: summary and release (lecture 598) | [MIL-008] | 2026-11-23 | 2026-11-23 | S01 | none (technical tasks, [ADR-0001]) | Learning points, published wiki, release v1.0.0 | [MIL-008 on the host](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/milestone/609) |
 
 ```plantuml
 @startgantt

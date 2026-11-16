@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-020 for the MIL-007 code | [e3592f7] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-021 for the MIL-008 code | [be64eb5] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-021 for the MIL-008 code | [be64eb5] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-022 for the wiki and RC-023 for the Project Plan; every concern is Covered | pending |
 
 ---
 
@@ -24,7 +24,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 | --- | --- | --- | --- | --- | --- | --- |
 | [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001] |
 | [SA-001] | SA | en | it | [BC-001] | [PP-001] | [RC-002] |
-| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-008] | [RC-012] |
+| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-008] | [RC-023] |
 | [MIL-001] | MIL | en | it | [BC-001], [PP-001] | [MIL-002] | [RC-003] |
 | [MIL-002] | MIL | en | it | [BC-001], [MIL-001] | [MIL-003] | [RC-004] |
 | [MIL-003] | MIL | en | it | [BC-001], [MIL-002] | [MIL-004] | [RC-005] |
@@ -35,19 +35,20 @@ Tracks backward and forward links between artifact instances so that traceabilit
 | [MIL-008] | MIL | en | it | [BC-001], [MIL-007] | - | [RC-010] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | - | [RC-011] |
 | [ADR-0002] | ADR | - | - | [BC-001], [ADR-0001] | - | [RC-013] |
-| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [RC-014], [RC-015], [RC-016], [RC-017], [RC-018], [RC-019], [RC-020], [RC-021] |
+| Wiki (`docs/wiki/`) | WIKI | en, da, ms | it | [MIL-001] to [MIL-008] | - | [RC-022] |
+| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-008] | - | [RC-014], [RC-015], [RC-016], [RC-017], [RC-018], [RC-019], [RC-020], [RC-021] |
 
 ## Concern Coverage
 
 | Concern (CN-ID) | Views that answer it | Decisions (ADR) | Quality check (TP) | Status |
 | --- | --- | --- | --- | --- |
-| CN-001 | none (no views; see ADR-0001) | [ADR-0001] | pytest tests, MIL-002 to MIL-007 | Planned |
-| CN-002 | none | [ADR-0001] | pull request per milestone | Planned |
+| CN-001 | none (no views; see ADR-0001) | [ADR-0001] | pytest tests, MIL-002 to MIL-007 | Covered |
+| CN-002 | none | [ADR-0001] | pull request per milestone | Covered |
 | CN-003 | none | [ADR-0001] | Getting Started guides, MIL-001 | Covered |
-| CN-004 | none | [ADR-0001] | tests call the assignment's function names | Planned |
+| CN-004 | none | [ADR-0001] | tests call the assignment's function names | Covered |
 | CN-005 | none | [ADR-0001] | repository description, topics, README, MIL-001 | Covered |
 | CN-006 | none | [ADR-0001] | pyproject review, MIL-001 | Covered |
-| CN-007 | none | [ADR-0001] | pictures and wiki, MIL-002 to MIL-008 | Planned |
+| CN-007 | none | [ADR-0001] | pictures and wiki, MIL-002 to MIL-008 | Covered |
 
 ## Open Inconsistencies
 
@@ -95,6 +96,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 [RC-018]: ./reviews/rc-018-code-mil-005.md
 [RC-019]: ./reviews/rc-019-code-mil-006.md
 [RC-020]: ./reviews/rc-020-code-mil-007.md
-[e3592f7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/e3592f7c76bf43c04c4748b324e82a28d12867e6
 [RC-021]: ./reviews/rc-021-code-mil-008.md
 [be64eb5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/be64eb51c71cf65bfd2ddff64d1acf881509e5eb
+[RC-022]: ./reviews/rc-022-wiki.md
+[RC-023]: ./reviews/rc-023-project-plan-synced.md
