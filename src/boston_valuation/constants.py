@@ -192,6 +192,43 @@ COLOR_LINEAR_MODEL: Final[str] = "indigo"
 COLOR_LOG_MODEL: Final[str] = "navy"
 COLOR_IDENTITY_LINE: Final[str] = "cyan"
 RESIDUAL_ALPHA: Final[float] = 0.6
+REGRESSION_FIGURE_SIZE: Final[tuple[float, float]] = (6.4, 4.8)
+REGRESSION_DPI: Final[int] = 100
+REGRESSION_TITLE_FONT_SIZE: Final[int] = 17
+REGRESSION_LABEL_FONT_SIZE: Final[int] = 14
+## @}
+
+## @name Regression (step 4)
+## @{
+PERCENT: Final[int] = 100
+COEFFICIENT_COLUMN: Final[str] = "Coefficient"
+RESIDUAL_DECIMALS: Final[int] = 2
+## @}
+
+## @name Chart text (regression and residuals)
+## @{
+ACTUAL_VS_PREDICTED_TITLE: Final[str] = (
+    r"Actual vs Predicted Prices: $y _i$ vs $\hat y_i$"
+)
+ACTUAL_PRICE_X_LABEL: Final[str] = r"Actual prices 000s $y _i$"
+PREDICTED_PRICE_Y_LABEL: Final[str] = r"Predicted prices 000s $\hat y _i$"
+RESIDUALS_VS_PREDICTED_TITLE: Final[str] = "Residuals vs Predicted Values"
+PREDICTED_PRICE_X_LABEL: Final[str] = r"Predicted Prices $\hat y _i$"
+RESIDUALS_LABEL: Final[str] = "Residuals"
+RESIDUAL_DISTRIBUTION_TITLE: Final[str] = (
+    "{prefix}Residuals Skew ({skew}) Mean ({mean})"
+)
+RESIDUAL_COUNT_LABEL: Final[str] = "Count"
+## @}
+
+## @name Step 4 picture
+## @{
+REGRESSION_PANEL_TITLE: Final[str] = (
+    "Linear regression on the training data: r-squared {r_squared:.2f}, "
+    "one extra room adds ${premium:.1f}"
+)
+REGRESSION_PANEL_COLUMNS: Final[int] = 3
+REGRESSION_PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (15.0, 5.5)
 ## @}
 
 ## @name Valuation scenario

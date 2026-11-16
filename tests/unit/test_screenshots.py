@@ -104,6 +104,32 @@ def test_step_3_relationships_is_written_as_png(tmp_path: Path) -> None:
     assert path.stat().st_size < MAX_PICTURE_BYTES
 
 
+def test_pictures_include_step_4_regression() -> None:
+    """@brief The regression panel is registered under its picture name."""
+    assert constants.STEP_PICTURES[4] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[4] == "step-4-regression.png"
+    assert screenshots.PICTURES[constants.STEP_PICTURES[4]] is (
+        screenshots.step_4_regression
+    )
+
+
+def test_step_4_regression_draws_three_charts_with_the_r_squared() -> None:
+    """@brief The step 4 picture is a panel of three charts."""
+    fig = screenshots.step_4_regression()
+    try:
+        assert len(fig.axes) == 3
+        assert "r-squared 0.75" in fig.get_suptitle()
+    finally:
+        plt.close(fig)
+
+
+def test_step_4_regression_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 4 picture is saved as a real, reasonably small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[4], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_PICTURE_BYTES
+
+
 def test_overview_figure_has_one_axis() -> None:
     """@brief The overview is drawn on a single axis."""
     fig = screenshots.overview_figure()

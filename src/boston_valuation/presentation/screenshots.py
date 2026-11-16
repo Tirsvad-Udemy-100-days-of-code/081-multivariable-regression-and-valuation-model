@@ -32,6 +32,9 @@ from boston_valuation.presentation.charts import (  # noqa: E402
 from boston_valuation.presentation.distribution_charts import (  # noqa: E402
     distribution_panel_figure,
 )
+from boston_valuation.presentation.regression_charts import (  # noqa: E402
+    regression_panel_figure,
+)
 from boston_valuation.presentation.relationship_charts import (  # noqa: E402
     relationship_panel_figure,
 )
@@ -206,11 +209,21 @@ def step_3_relationships() -> Figure:
     return relationship_panel_figure(load_data())
 
 
+def step_4_regression() -> Figure:
+    """@brief Draw the first multivariable regression and its residuals.
+
+    @return A panel of the actual against the predicted prices, the residuals
+        against the predicted prices and the distribution of the residuals.
+    """
+    return regression_panel_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
     constants.STEP_PICTURES[1]: step_1_goals,
     constants.STEP_PICTURES[2]: step_2_distributions,
     constants.STEP_PICTURES[3]: step_3_relationships,
+    constants.STEP_PICTURES[4]: step_4_regression,
 }
 
 
