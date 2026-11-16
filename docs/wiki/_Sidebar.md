@@ -4,6 +4,7 @@
 - [Getting Started](Getting-Started)
 - [Step 1 Goals and Data](Step-1-Goals-And-Data)
 - [Step 2 Distributions](Step-2-Distributions)
+- [Step 3 Relationships](Step-3-Relationships)
 
 **Languages**
 
