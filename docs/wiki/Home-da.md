@@ -12,5 +12,6 @@ Dag 81 i Udemys *100 Days of Code*: du er analytiker i et ejendomsudviklingssels
 | [Trin 1: Mål og dataudforskning](Step-1-Goals-And-Data-da) | Hvad opgaven er, hvad Boston-data indeholder, om de er rene, og hvad de beskrivende statistikker siger |
 | [Trin 2: Fordelinger af variablerne](Step-2-Distributions-da) | Hvordan fordeler priser, pendling, værelser og motorvejsadgang sig, og hvor mange huse ligger ved floden? |
 | [Trin 3: Sammenhænge i data](Step-3-Relationships-da) | Hvilke variabler hænger sammen, og hvad forventer du, før du modellerer? |
+| [Trin 4: Opdeling og multivariabel regression](Step-4-Regression-da) | Hvorfor vi deler data, hvordan man tilpasser en regression, og hvordan man læser koefficienter og residualer |
 
 Opgavens spørgsmål: kan et hus' egenskaber forudsige dets pris, hvor god er modellen på huse, den ikke har set, og gør en log-transformation af prisen den bedre?

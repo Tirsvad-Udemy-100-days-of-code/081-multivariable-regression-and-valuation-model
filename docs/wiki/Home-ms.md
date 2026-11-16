@@ -12,5 +12,6 @@ Hari ke-81 *100 Days of Code* Udemy: anda ialah penganalisis di sebuah syarikat 
 | [Langkah 1: Matlamat dan penerokaan data](Step-1-Goals-And-Data-ms) | Apakah tugasnya, apa yang ada dalam data Boston, adakah ia bersih, dan apa kata statistik deskriptif |
 | [Langkah 2: Taburan ciri](Step-2-Distributions-ms) | Bagaimana harga, perjalanan, bilik dan akses lebuh raya tertabur, dan berapa banyak rumah bersebelahan sungai? |
 | [Langkah 3: Hubungan dalam data](Step-3-Relationships-ms) | Ciri manakah bergerak bersama, dan apa yang anda jangka sebelum membina model? |
+| [Langkah 4: Pembahagian dan regresi berbilang pemboleh ubah](Step-4-Regression-ms) | Mengapa kita membahagi data, cara memadankan regresi, dan cara membaca pekali serta reja |
 
 Soalan tugasan: bolehkah ciri sebuah rumah meramalkan harganya, sejauh mana baiknya model pada rumah yang belum dilihatnya, dan adakah penjelmaan log harga menjadikannya lebih baik?
