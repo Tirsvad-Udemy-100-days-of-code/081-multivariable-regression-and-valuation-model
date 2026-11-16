@@ -41,6 +41,9 @@ from boston_valuation.presentation.regression_charts import (  # noqa: E402
 from boston_valuation.presentation.relationship_charts import (  # noqa: E402
     relationship_panel_figure,
 )
+from boston_valuation.presentation.summary_charts import (  # noqa: E402
+    model_scores_figure,
+)
 from boston_valuation.presentation.valuation_charts import (  # noqa: E402
     valuation_figure,
 )
@@ -242,6 +245,15 @@ def step_6_valuation() -> Figure:
     return valuation_figure(load_data())
 
 
+def step_7_summary() -> Figure:
+    """@brief Draw both models on the training data and on the test data.
+
+    @return A grouped bar chart of the training and test r-squared of the
+        linear model and the log model.
+    """
+    return model_scores_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
     constants.STEP_PICTURES[1]: step_1_goals,
@@ -250,6 +262,7 @@ PICTURES: dict[str, Callable[[], Figure]] = {
     constants.STEP_PICTURES[4]: step_4_regression,
     constants.STEP_PICTURES[5]: step_5_log_model,
     constants.STEP_PICTURES[6]: step_6_valuation,
+    constants.STEP_PICTURES[7]: step_7_summary,
 }
 
 
