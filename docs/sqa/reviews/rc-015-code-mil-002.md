@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version | pending |
+| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version | [509918c] |
 
 ---
 
@@ -56,3 +56,4 @@ Go — every criterion of QC-PY-001 is Pass or N-A; there is no blocking finding
 
 ---
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[509918c]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/509918cc0598a2f4ddac68110117fe5681672a19
