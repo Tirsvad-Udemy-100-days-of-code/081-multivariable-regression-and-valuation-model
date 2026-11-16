@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version<br>Reviewed in RC-012: Go | [0e1081d] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Milestone column links the synced milestones<br>Reviewed in RC-023: Go | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Milestone column links the synced milestones<br>Reviewed in RC-023: Go | [c6ed0a7] |
 
 ---
 
@@ -105,3 +105,4 @@ MIL-001 → MIL-002 → MIL-003 → MIL-004 → MIL-005 → MIL-006 → MIL-007 
 [MIL-007]: ./milestones/mil-007-step-6-valuation.md
 [MIL-008]: ./milestones/mil-008-lecture-598-summary-release.md
 [0e1081d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/0e1081ddb340d222e4fb986725d5a7feef19e5f8
+[c6ed0a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/c6ed0a768a7fef6d86d64d622dbb1bc94e6ce4f4
