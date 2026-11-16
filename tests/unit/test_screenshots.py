@@ -78,6 +78,32 @@ def test_step_2_distributions_is_written_as_png(tmp_path: Path) -> None:
     assert path.stat().st_size < MAX_PICTURE_BYTES
 
 
+def test_pictures_include_step_3_relationships() -> None:
+    """@brief The relationship panel is registered under its picture name."""
+    assert constants.STEP_PICTURES[3] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[3] == "step-3-relationships.png"
+    assert screenshots.PICTURES[constants.STEP_PICTURES[3]] is (
+        screenshots.step_3_relationships
+    )
+
+
+def test_step_3_relationships_draws_five_scatter_plots_and_bars() -> None:
+    """@brief The step 3 picture is a panel of six charts with a title."""
+    fig = screenshots.step_3_relationships()
+    try:
+        assert len(fig.axes) == 6
+        assert fig.get_suptitle() == constants.RELATIONSHIP_PANEL_TITLE
+    finally:
+        plt.close(fig)
+
+
+def test_step_3_relationships_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 3 picture is saved as a real, reasonably small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[3], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_PICTURE_BYTES
+
+
 def test_overview_figure_has_one_axis() -> None:
     """@brief The overview is drawn on a single axis."""
     fig = screenshots.overview_figure()

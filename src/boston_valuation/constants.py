@@ -138,6 +138,52 @@ JOINT_COLOR_RM_PRICE: Final[str] = "darkblue"
 JOINT_ALPHA: Final[float] = 0.5
 JOINT_HEIGHT: Final[int] = 8
 JOINT_HEIGHT_SMALL: Final[int] = 7
+JOINT_KIND: Final[str] = "scatter"
+JOINT_STYLE_DARK: Final[str] = "darkgrid"
+JOINT_STYLE_LIGHT: Final[str] = "whitegrid"
+PAIR_REGRESSION_LINE_COLOR: Final[str] = "cyan"
+## @}
+
+## @name Relationships of the assignment
+## @{
+PAIR_DISTANCE_POLLUTION: Final[tuple[str, str]] = (COL_DIS, COL_NOX)
+PAIR_POLLUTION_INDUSTRY: Final[tuple[str, str]] = (COL_NOX, COL_INDUS)
+PAIR_POVERTY_ROOMS: Final[tuple[str, str]] = (COL_LSTAT, COL_RM)
+PAIR_POVERTY_PRICE: Final[tuple[str, str]] = (COL_LSTAT, COL_PRICE)
+PAIR_ROOMS_PRICE: Final[tuple[str, str]] = (COL_RM, COL_PRICE)
+RELATIONSHIP_PAIRS: Final[tuple[tuple[str, str], ...]] = (
+    PAIR_DISTANCE_POLLUTION,
+    PAIR_POLLUTION_INDUSTRY,
+    PAIR_POVERTY_ROOMS,
+    PAIR_POVERTY_PRICE,
+    PAIR_ROOMS_PRICE,
+)
+RELATIONSHIP_COLORS: Final[tuple[str, ...]] = (
+    JOINT_COLOR_DIS,
+    JOINT_COLOR_NOX,
+    JOINT_COLOR_RM,
+    JOINT_COLOR_LSTAT,
+    JOINT_COLOR_RM_PRICE,
+)
+## @}
+
+## @name Step 3 picture
+## @{
+RELATIONSHIP_PANEL_TITLE: Final[str] = (
+    "Relationships between the features and the price"
+)
+RELATIONSHIP_PANEL_ROWS: Final[int] = 2
+RELATIONSHIP_PANEL_COLUMNS: Final[int] = 3
+RELATIONSHIP_PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (15.0, 8.5)
+RELATIONSHIP_SCATTER_SIZE: Final[int] = 14
+RELATIONSHIP_PAIR_TITLE: Final[str] = "{first} vs {second}, r = {value:.2f}"
+CORRELATION_BARS_TITLE: Final[str] = "Correlation with PRICE"
+CORRELATION_BARS_X_LABEL: Final[str] = "Correlation coefficient (r)"
+CORRELATION_COLOR_POSITIVE: Final[str] = "#2e7d32"
+CORRELATION_COLOR_NEGATIVE: Final[str] = "#c62828"
+CORRELATION_AXIS_LIMIT: Final[float] = 1.0
+CORRELATION_ZERO_LINE_COLOR: Final[str] = "black"
+CORRELATION_ZERO_LINE_WIDTH: Final[float] = 0.8
 ## @}
 
 ## @name Chart style (regression and residuals)

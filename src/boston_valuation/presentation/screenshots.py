@@ -32,6 +32,9 @@ from boston_valuation.presentation.charts import (  # noqa: E402
 from boston_valuation.presentation.distribution_charts import (  # noqa: E402
     distribution_panel_figure,
 )
+from boston_valuation.presentation.relationship_charts import (  # noqa: E402
+    relationship_panel_figure,
+)
 
 _LOG = logging.getLogger(__name__)
 DEFAULT_OUTPUT_DIR = Path(*constants.IMAGES_DIR)
@@ -194,10 +197,20 @@ def step_2_distributions() -> Figure:
     return distribution_panel_figure(load_data())
 
 
+def step_3_relationships() -> Figure:
+    """@brief Draw the relationships between the features and the price.
+
+    @return A panel of five scatter plots with their correlation coefficients
+        and a bar chart of the correlation of every feature with the price.
+    """
+    return relationship_panel_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
     constants.STEP_PICTURES[1]: step_1_goals,
     constants.STEP_PICTURES[2]: step_2_distributions,
+    constants.STEP_PICTURES[3]: step_3_relationships,
 }
 
 
