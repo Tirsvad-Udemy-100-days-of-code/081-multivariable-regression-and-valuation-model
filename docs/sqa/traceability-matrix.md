@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-016 for the MIL-003 code | [a344003] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-017 for the MIL-004 code | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-017 for the MIL-004 code | [c164920] |
 
 ---
 
@@ -93,3 +93,4 @@ Tracks backward and forward links between artifact instances so that traceabilit
 [RC-016]: ./reviews/rc-016-code-mil-003.md
 [a344003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/a344003d81fb0209afc65cd318625cd85726dec1
 [RC-017]: ./reviews/rc-017-code-mil-004.md
+[c164920]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/c1649208bd12a1d006e1434ae1359b6eaff934af
