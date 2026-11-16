@@ -9,5 +9,6 @@ Day 81 of Udemy's *100 Days of Code*: you are an analyst at a real estate develo
 | Page | What you gain |
 | --- | --- |
 | [Getting started](Getting-Started) | A `.venv`, the install, and how to run, test and check the project on Linux and Windows |
+| [Step 1: Goals and data exploration](Step-1-Goals-And-Data) | What the task is, what the Boston data holds, whether it is clean, and what the descriptive statistics say |
 
 The question of the assignment: can the characteristics of a house predict its price, how good is the model on houses it has not seen, and does a log transformation of the price make it better?

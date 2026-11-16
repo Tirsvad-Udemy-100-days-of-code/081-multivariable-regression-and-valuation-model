@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Initial version<br>Accepted with the baseline; maintained by the AI as stand-in for S01 | [0e1081d] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added ADR-0002, RC-013 and RC-014 for MIL-001; concerns CN-003, CN-005 and CN-006 are Covered | [cbccabd] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added ADR-0002, RC-013 and RC-014 for MIL-001; concerns CN-003, CN-005 and CN-006 are Covered | [cbccabd] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | S01 (AI as stand-in) | Added RC-015 for the MIL-002 code | [509918c] |
 
 ---
 
@@ -35,7 +35,7 @@ Tracks backward and forward links between artifact instances so that traceabilit
 | [MIL-008] | MIL | en | it | [BC-001], [MIL-007] | - | [RC-010] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | - | [RC-011] |
 | [ADR-0002] | ADR | - | - | [BC-001], [ADR-0001] | - | [RC-013] |
-| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [RC-014] |
+| Source code (`src/`, `tests/`) | PY | - | - | [MIL-002] to [MIL-007] | - | [RC-014], [RC-015] |
 
 ## Concern Coverage
 
@@ -87,7 +87,8 @@ Tracks backward and forward links between artifact instances so that traceabilit
 [RC-010]: ./reviews/rc-010-mil-008.md
 [RC-011]: ./reviews/rc-011-adr-0001.md
 [RC-012]: ./reviews/rc-012-project-plan.md
-[0e1081d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/0e1081ddb340d222e4fb986725d5a7feef19e5f8
 [RC-013]: ./reviews/rc-013-adr-0002.md
 [RC-014]: ./reviews/rc-014-code-mil-001.md
 [cbccabd]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/cbccabd81320a8746059e7f17e50cc31ad8cdd04
+[RC-015]: ./reviews/rc-015-code-mil-002.md
+[509918c]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/commit/509918cc0598a2f4ddac68110117fe5681672a19

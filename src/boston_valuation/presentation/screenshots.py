@@ -25,6 +25,10 @@ from matplotlib.figure import Figure  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch  # noqa: E402
 
 from boston_valuation import constants  # noqa: E402
+from boston_valuation.infrastructure.csv_loader import load_data  # noqa: E402
+from boston_valuation.presentation.charts import (  # noqa: E402
+    descriptive_table_figure,
+)
 
 _LOG = logging.getLogger(__name__)
 DEFAULT_OUTPUT_DIR = Path(*constants.IMAGES_DIR)
@@ -171,8 +175,17 @@ def overview_figure() -> Figure:
     return fig
 
 
+def step_1_goals() -> Figure:
+    """@brief Draw the descriptive statistics of the data (lecture 597).
+
+    @return The tables of count, mean, spread and quartiles of every column.
+    """
+    return descriptive_table_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
+    constants.STEP_PICTURES[1]: step_1_goals,
 }
 
 

@@ -42,6 +42,17 @@ def test_pictures_include_overview() -> None:
     assert constants.STEP_PICTURES[0] in screenshots.PICTURES
 
 
+def test_pictures_include_step_1_goals() -> None:
+    """@brief The descriptive table is registered under its picture name."""
+    assert constants.STEP_PICTURES[1] in screenshots.PICTURES
+
+
+def test_step_1_goals_draws_descriptive_title() -> None:
+    """@brief The step 1 picture is the descriptive statistics table."""
+    fig = screenshots.step_1_goals()
+    assert fig.get_suptitle() == constants.DESCRIPTIVE_TITLE
+
+
 def test_overview_figure_has_one_axis() -> None:
     """@brief The overview is drawn on a single axis."""
     fig = screenshots.overview_figure()

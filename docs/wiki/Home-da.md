@@ -9,5 +9,6 @@ Dag 81 i Udemys *100 Days of Code*: du er analytiker i et ejendomsudviklingssels
 | Side | Det får du ud af det |
 | --- | --- |
 | [Kom i gang](Getting-Started-da) | Et `.venv`, installationen, og hvordan du kører, tester og kontrollerer projektet på Linux og Windows |
+| [Trin 1: Mål og dataudforskning](Step-1-Goals-And-Data-da) | Hvad opgaven er, hvad Boston-data indeholder, om de er rene, og hvad de beskrivende statistikker siger |
 
 Opgavens spørgsmål: kan et hus' egenskaber forudsige dets pris, hvor god er modellen på huse, den ikke har set, og gør en log-transformation af prisen den bedre?
