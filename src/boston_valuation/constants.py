@@ -95,7 +95,37 @@ COLOR_RAD: Final[str] = "#7b1fa2"
 RAD_BINS: Final[int] = 24
 RAD_BAR_WIDTH: Final[float] = 0.5
 DISPLOT_ASPECT: Final[int] = 2
+DISTANCE_BINS: Final[int] = 50
+RAD_EDGE_COLOR: Final[str] = "black"
 RIVER_LABELS: Final[tuple[str, str]] = ("No", "Yes")
+RIVER_COLOR_SCALE: Final[str] = "haline"
+## @}
+
+## @name Chart text (distributions)
+## @{
+HOMES_Y_LABEL: Final[str] = "Nr. of Homes"
+PRICE_TITLE: Final[str] = "1970s Home Values in Boston. Average: {average:.2f} ($1000s)"
+PRICE_X_LABEL: Final[str] = "Price in 000s"
+DISTANCE_TITLE: Final[str] = "Distance to Employment Centres. Average: {average:.2f}"
+DISTANCE_X_LABEL: Final[str] = "Weighted Distance to 5 Boston Employment Centres"
+ROOMS_TITLE: Final[str] = "Distribution of Rooms in Boston. Average: {average:.2f}"
+ROOMS_X_LABEL: Final[str] = "Average Number of Rooms"
+RAD_TITLE: Final[str] = "Accessibility to Highways"
+RAD_X_LABEL: Final[str] = "Accessibility to Highways"
+RAD_Y_LABEL: Final[str] = "Nr. of Houses"
+RIVER_TITLE: Final[str] = "Next to Charles River?"
+RIVER_X_LABEL: Final[str] = "Property Located Next to the River?"
+RIVER_Y_LABEL: Final[str] = "Number of Homes"
+## @}
+
+## @name Step 2 picture
+## @{
+PANEL_TITLE: Final[str] = "Distributions of price, distance, rooms and highway access"
+PANEL_TITLE_FONT_SIZE: Final[int] = 16
+PANEL_AXES_TITLE_FONT_SIZE: Final[int] = 11
+PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (13.0, 8.0)
+PANEL_ROWS: Final[int] = 2
+PANEL_COLUMNS: Final[int] = 2
 ## @}
 
 ## @name Chart style (relationships)

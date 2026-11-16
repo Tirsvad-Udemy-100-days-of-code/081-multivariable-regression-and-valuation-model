@@ -3,6 +3,7 @@
 from pathlib import Path
 
 import matplotlib
+import matplotlib.pyplot as plt
 import pytest
 from matplotlib.figure import Figure
 
@@ -10,6 +11,7 @@ from boston_valuation import constants
 from boston_valuation.presentation import screenshots
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
+MAX_PICTURE_BYTES = 400_000
 
 
 def _fake_figure() -> Figure:
@@ -51,6 +53,29 @@ def test_step_1_goals_draws_descriptive_title() -> None:
     """@brief The step 1 picture is the descriptive statistics table."""
     fig = screenshots.step_1_goals()
     assert fig.get_suptitle() == constants.DESCRIPTIVE_TITLE
+
+
+def test_pictures_include_step_2_distributions() -> None:
+    """@brief The distribution panel is registered under its picture name."""
+    assert constants.STEP_PICTURES[2] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[2] == "step-2-distributions.png"
+
+
+def test_step_2_distributions_draws_panel_of_four_charts() -> None:
+    """@brief The step 2 picture is a panel titled after the four charts."""
+    fig = screenshots.step_2_distributions()
+    try:
+        assert len(fig.axes) == 4
+        assert fig.get_suptitle() == constants.PANEL_TITLE
+    finally:
+        plt.close(fig)
+
+
+def test_step_2_distributions_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 2 picture is saved as a real, reasonably small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[2], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_PICTURE_BYTES
 
 
 def test_overview_figure_has_one_axis() -> None:
