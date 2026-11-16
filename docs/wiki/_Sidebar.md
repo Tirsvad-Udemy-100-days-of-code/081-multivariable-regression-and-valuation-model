@@ -6,6 +6,7 @@
 - [Step 2 Distributions](Step-2-Distributions)
 - [Step 3 Relationships](Step-3-Relationships)
 - [Step 4 Regression](Step-4-Regression)
+- [Step 5 Log Model](Step-5-Log-Model)
 
 **Languages**
 

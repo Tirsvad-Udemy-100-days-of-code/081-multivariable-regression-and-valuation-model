@@ -13,5 +13,6 @@ Dag 81 i Udemys *100 Days of Code*: du er analytiker i et ejendomsudviklingssels
 | [Trin 2: Fordelinger af variablerne](Step-2-Distributions-da) | Hvordan fordeler priser, pendling, værelser og motorvejsadgang sig, og hvor mange huse ligger ved floden? |
 | [Trin 3: Sammenhænge i data](Step-3-Relationships-da) | Hvilke variabler hænger sammen, og hvad forventer du, før du modellerer? |
 | [Trin 4: Opdeling og multivariabel regression](Step-4-Regression-da) | Hvorfor vi deler data, hvordan man tilpasser en regression, og hvordan man læser koefficienter og residualer |
+| [Trin 5: Log-transformationen](Step-5-Log-Model-da) | Kan en log-transformation af prisen give en bedre tilpasning, og hvordan sammenligner vi modeller på data, de ikke har set? |
 
 Opgavens spørgsmål: kan et hus' egenskaber forudsige dets pris, hvor god er modellen på huse, den ikke har set, og gør en log-transformation af prisen den bedre?
