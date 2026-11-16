@@ -29,10 +29,10 @@ exists once, in that language, under its normal name (`business-case.md`); the
 | Setting | Value |
 | --- | --- |
 | PO language | en |
-| PO domain | it |
+| PO domain | education |
 | High-level register | IT Executive English |
 | Technical register | IT Professional English |
-| Wiki languages | en, da, ms (`framework/process/wiki.md`) |
+| Wiki languages | en, da and ms (`framework/process/wiki.md`) |
 
 Every artifact of a type marked "Yes" below states its language and domain in
 its `Language` and `Domain` Metadata rows; `new-artifact.sh` fills them from
@@ -45,6 +45,7 @@ reviewer can see at once which professional vocabulary a document uses.
 | it | Software and IT |
 | medical | Healthcare and medical devices |
 | construction | Construction and civil engineering |
+| education | Education, teaching and learning (a course exercise project) |
 
 | Artifact types | Register | Written in the PO language |
 | --- | --- | --- |
