@@ -15,5 +15,6 @@ Dag 81 i Udemys *100 Days of Code*: du er analytiker i et ejendomsudviklingssels
 | [Trin 4: Opdeling og multivariabel regression](Step-4-Regression-da) | Hvorfor vi deler data, hvordan man tilpasser en regression, og hvordan man læser koefficienter og residualer |
 | [Trin 5: Log-transformationen](Step-5-Log-Model-da) | Kan en log-transformation af prisen give en bedre tilpasning, og hvordan sammenligner vi modeller på data, de ikke har set? |
 | [Trin 6: Vurdering af en ejendom](Step-6-Valuation-da) | Hvordan bruger du modellen til at vurdere et gennemsnitligt hus og et hus, du selv beskriver? |
+| [Trin 7: Læringspunkter og resumé](Step-7-Summary-da) | Hvad lærte dag 81 dig, og hvor findes hvert læringspunkt i koden? |
 
 Opgavens spørgsmål: kan et hus' egenskaber forudsige dets pris, hvor god er modellen på huse, den ikke har set, og gør en log-transformation af prisen den bedre?

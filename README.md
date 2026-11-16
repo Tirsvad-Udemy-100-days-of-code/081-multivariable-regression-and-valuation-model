@@ -19,7 +19,7 @@ Day 81 of Udemy's *100 Days of Code: The Complete Python Pro Bootcamp*, as a tes
 
 The assignment has two lectures. Lecture 597, "Day 81 Goals", sets the scene and the task: a real estate company wants a price estimate for a residential project before it starts, based on the number of rooms, the distance to employment centres, how rich or poor the area is, the number of students per teacher and similar characteristics. You analyse the Boston house price data, split it into training and test data, run a multivariable regression, evaluate the coefficients and the residuals, improve the model with a data transformation and finally value a property. Lecture 598, "Solution & Learning Points", gives the completed notebook and seven learning points: spotting relationships with a pair plot, splitting the data to judge a model on unseen data, running a multivariable regression, checking the sign of the coefficients, analysing the residuals, improving a model with a log transformation, and using the model to predict a price for chosen features.
 
-The project turns the notebook into seven steps. Each step has code in `src/boston_valuation`, tests in `tests/`, a section in the notebook in `notebooks/`, a picture generated from the code, and a wiki page in English, Danish and Bahasa Malaysia that explains what the step teaches. The steps are added one by one, each with its own milestone and pull request.
+The project turns the notebook into seven steps. Each step has code in `src/boston_valuation`, tests in `tests/`, a section in the notebook in `notebooks/`, a picture generated from the code, and a wiki page in English, Danish and Bahasa Malaysia that explains what the step teaches. Each step was added with its own milestone and pull request.
 
 | Folder | What it holds |
 | --- | --- |
@@ -42,6 +42,21 @@ The project turns the notebook into seven steps. Each step has code in `src/bost
 | Step 4: Split and regression | [Step 4: Split and regression](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-4-Regression) | ![Step 4: actual against predicted prices, residuals and their distribution](docs/images/step-4-regression.png) |
 | Step 5: Log transformation | [Step 5: Log transformation](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-5-Log-Model) | ![Step 5: the linear model and the log price model side by side](docs/images/step-5-log-model.png) |
 | Step 6: Valuation | [Step 6: Valuation](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-6-Valuation) | ![Step 6: the estimated value of the average and the described property](docs/images/step-6-valuation.png) |
+| Step 7: Learning points and summary | [Step 7: Learning points and summary](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-7-Summary) | ![Step 7: the r-squared of both models on the training and the test data](docs/images/step-7-summary.png) |
+
+### Learning points of lecture 598
+
+Lecture 598, "Solution & Learning Points", ends with seven learning points. Each one has a place in the code, and the wiki page [Step 7: Learning points and summary](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/081-multivariable-regression-and-valuation-model/wiki/Step-7-Summary) explains them.
+
+| # | Learning point | Step | Where in the code |
+| --- | --- | --- | --- |
+| 1 | Spot relationships in the data with a pair plot | Step 3 | `pair_plot_figure`, `correlation` |
+| 2 | Split the data to judge a model on data it has not seen | Step 4 | `split_train_test` |
+| 3 | Run a multivariable regression | Step 4 | `fit_linear_regression`, `r_squared` |
+| 4 | Check that the coefficients have the sign you expect | Steps 4 and 5 | `coefficient_table`, `has_expected_signs` |
+| 5 | Analyse the residuals: mean, skew and plots | Step 4 | `residuals`, `residual_mean`, `residual_skew` |
+| 6 | Improve the model with a log transformation of the target | Step 5 | `fit_log_model`, `compare_test_r_squared` |
+| 7 | Use the model to predict a price for chosen features | Step 6 | `value_property` |
 
 The data and the notebooks come from the course resources and are used here for personal study; the rights stay with the course author. The data column `B` encodes a racial proportion of the town. It stays because the assignment uses it, and a model that uses it should not be put to real use.
 
