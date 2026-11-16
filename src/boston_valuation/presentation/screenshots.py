@@ -41,6 +41,9 @@ from boston_valuation.presentation.regression_charts import (  # noqa: E402
 from boston_valuation.presentation.relationship_charts import (  # noqa: E402
     relationship_panel_figure,
 )
+from boston_valuation.presentation.valuation_charts import (  # noqa: E402
+    valuation_figure,
+)
 
 _LOG = logging.getLogger(__name__)
 DEFAULT_OUTPUT_DIR = Path(*constants.IMAGES_DIR)
@@ -230,6 +233,15 @@ def step_5_log_model() -> Figure:
     return model_comparison_panel_figure(load_data())
 
 
+def step_6_valuation() -> Figure:
+    """@brief Draw the value of the average and the described property.
+
+    @return A bar chart of the two dollar estimates next to a table of the
+        characteristics that change, with the log estimates in the title.
+    """
+    return valuation_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
     constants.STEP_PICTURES[1]: step_1_goals,
@@ -237,6 +249,7 @@ PICTURES: dict[str, Callable[[], Figure]] = {
     constants.STEP_PICTURES[3]: step_3_relationships,
     constants.STEP_PICTURES[4]: step_4_regression,
     constants.STEP_PICTURES[5]: step_5_log_model,
+    constants.STEP_PICTURES[6]: step_6_valuation,
 }
 
 
