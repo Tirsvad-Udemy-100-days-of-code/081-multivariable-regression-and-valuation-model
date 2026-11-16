@@ -9,6 +9,8 @@ description = "Udemy 100 Days of Code, Day 81: a multivariable regression that v
 readme = "README.md"
 requires-python = ">=3.13"
 license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
 dependencies = [
     "pandas>=2.2.3",
     "numpy>=2.1",
