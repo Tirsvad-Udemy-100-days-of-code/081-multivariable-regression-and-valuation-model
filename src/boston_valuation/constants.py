@@ -231,6 +231,68 @@ REGRESSION_PANEL_COLUMNS: Final[int] = 3
 REGRESSION_PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (15.0, 5.5)
 ## @}
 
+## @name Log transformation (step 5)
+## @{
+COLOR_PRICE_SKEW: Final[str] = "green"
+LOG_MAPPING_DPI: Final[int] = 150
+EXPECTED_SIGN_POSITIVE: Final[int] = 1
+EXPECTED_SIGN_NEGATIVE: Final[int] = -1
+LOG_EXPECTED_SIGNS: Final[tuple[tuple[str, int], ...]] = (
+    (COL_CHAS, EXPECTED_SIGN_POSITIVE),
+    (COL_RM, EXPECTED_SIGN_POSITIVE),
+    (COL_PTRATIO, EXPECTED_SIGN_NEGATIVE),
+    (COL_LSTAT, EXPECTED_SIGN_NEGATIVE),
+    (COL_NOX, EXPECTED_SIGN_NEGATIVE),
+)
+LOG_COEFFICIENT_COLUMN: Final[str] = "coef"
+## @}
+
+## @name Chart text (log transformation)
+## @{
+PRICE_SKEW_TITLE: Final[str] = "Normal Prices. Skew is {skew:.2f}"
+LOG_PRICE_SKEW_TITLE: Final[str] = "Log Prices. Skew is {skew:.2f}"
+LOG_PRICE_X_LABEL: Final[str] = "Log Price"
+DISTRIBUTION_COUNT_LABEL: Final[str] = "Count"
+LOG_MAPPING_TITLE: Final[str] = "Mapping the Original Price to a Log Price"
+LOG_MAPPING_X_LABEL: Final[str] = "Actual $ Price in 000s"
+LOG_MAPPING_Y_LABEL: Final[str] = "Log Price"
+LOG_ACTUAL_VS_PREDICTED_PANEL_TITLE: Final[str] = (
+    r"Actual vs Predicted Log Prices: $y _i$ vs $\hat y_i$"
+)
+R_SQUARED_TITLE_SUFFIX: Final[str] = " (R-Squared {r_squared:.2f})"
+LOG_ACTUAL_VS_PREDICTED_TITLE: Final[str] = (
+    LOG_ACTUAL_VS_PREDICTED_PANEL_TITLE + R_SQUARED_TITLE_SUFFIX
+)
+LOG_ACTUAL_X_LABEL: Final[str] = r"Actual Log Prices $y _i$"
+LOG_PREDICTED_Y_LABEL: Final[str] = r"Predicted Log Prices $\hat y _i$"
+LOG_RESIDUALS_VS_PREDICTED_TITLE: Final[str] = (
+    "Residuals vs Fitted Values for Log Prices"
+)
+LOG_PREDICTED_X_LABEL: Final[str] = r"Predicted Log Prices $\hat y _i$"
+LOG_RESIDUAL_PREFIX: Final[str] = "Log price model: "
+ORIGINAL_RESIDUAL_PREFIX: Final[str] = "Original model: "
+## @}
+
+## @name Step 5 picture
+## @{
+COMPARISON_PANEL_TITLE: Final[str] = (
+    "Linear vs log price model: training r-squared {linear_train:.2f} vs "
+    "{log_train:.2f}, test r-squared {linear_test:.2f} vs {log_test:.2f}"
+)
+LINEAR_ROW_TITLE: Final[str] = (
+    "Linear model on the price (indigo): training r-squared {train:.2f}, "
+    "test r-squared {test:.2f}"
+)
+LOG_ROW_TITLE: Final[str] = (
+    "Linear model on the log price (navy): training r-squared {train:.2f}, "
+    "test r-squared {test:.2f}"
+)
+COMPARISON_PANEL_ROWS: Final[int] = 2
+COMPARISON_PANEL_COLUMNS: Final[int] = 3
+COMPARISON_PANEL_FIGURE_SIZE: Final[tuple[float, float]] = (14.0, 9.0)
+COMPARISON_ROW_TITLE_FONT_SIZE: Final[int] = 13
+## @}
+
 ## @name Valuation scenario
 ## @{
 NEXT_TO_RIVER: Final[bool] = True

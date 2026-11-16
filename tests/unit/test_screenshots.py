@@ -12,6 +12,7 @@ from boston_valuation.presentation import screenshots
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 MAX_PICTURE_BYTES = 400_000
+MAX_STEP_5_PICTURE_BYTES = 450_000
 
 
 def _fake_figure() -> Figure:
@@ -128,6 +129,34 @@ def test_step_4_regression_is_written_as_png(tmp_path: Path) -> None:
     path = screenshots.render_picture(constants.STEP_PICTURES[4], tmp_path)
     assert path.read_bytes().startswith(PNG_SIGNATURE)
     assert path.stat().st_size < MAX_PICTURE_BYTES
+
+
+def test_pictures_include_step_5_log_model() -> None:
+    """@brief The model comparison panel is registered under its picture name."""
+    assert constants.STEP_PICTURES[5] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[5] == "step-5-log-model.png"
+    assert screenshots.PICTURES[constants.STEP_PICTURES[5]] is (
+        screenshots.step_5_log_model
+    )
+
+
+def test_step_5_log_model_draws_six_charts_with_both_r_squared() -> None:
+    """@brief The step 5 picture is a panel of two rows of three charts."""
+    fig = screenshots.step_5_log_model()
+    try:
+        assert len(fig.axes) == 6
+        title = fig.get_suptitle()
+        assert "training r-squared 0.75 vs 0.79" in title
+        assert "test r-squared 0.67 vs 0.74" in title
+    finally:
+        plt.close(fig)
+
+
+def test_step_5_log_model_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 5 picture is saved as a real, reasonably small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[5], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_STEP_5_PICTURE_BYTES
 
 
 def test_overview_figure_has_one_axis() -> None:

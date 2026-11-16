@@ -32,6 +32,9 @@ from boston_valuation.presentation.charts import (  # noqa: E402
 from boston_valuation.presentation.distribution_charts import (  # noqa: E402
     distribution_panel_figure,
 )
+from boston_valuation.presentation.log_charts import (  # noqa: E402
+    model_comparison_panel_figure,
+)
 from boston_valuation.presentation.regression_charts import (  # noqa: E402
     regression_panel_figure,
 )
@@ -218,12 +221,22 @@ def step_4_regression() -> Figure:
     return regression_panel_figure(load_data())
 
 
+def step_5_log_model() -> Figure:
+    """@brief Draw the linear model and the log price model side by side.
+
+    @return A panel of two rows: the charts of the linear model in indigo and
+        of the log model in navy, with the training and test r-squared of both.
+    """
+    return model_comparison_panel_figure(load_data())
+
+
 PICTURES: dict[str, Callable[[], Figure]] = {
     constants.OVERVIEW_PICTURE: overview_figure,
     constants.STEP_PICTURES[1]: step_1_goals,
     constants.STEP_PICTURES[2]: step_2_distributions,
     constants.STEP_PICTURES[3]: step_3_relationships,
     constants.STEP_PICTURES[4]: step_4_regression,
+    constants.STEP_PICTURES[5]: step_5_log_model,
 }
 
 

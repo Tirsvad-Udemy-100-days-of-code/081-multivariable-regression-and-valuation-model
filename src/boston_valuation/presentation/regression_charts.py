@@ -33,7 +33,7 @@ from boston_valuation.domain.regression import (  # noqa: E402
 )
 
 
-def _single_axes() -> tuple[Figure, Axes]:
+def single_axes() -> tuple[Figure, Axes]:
     """@brief Make a figure with one axis in the size of a lecture chart.
 
     @return The figure and its axis.
@@ -60,7 +60,7 @@ def _label_axes(
     ax.set_ylabel(y_label, fontsize=label_size)
 
 
-def _draw_actual_vs_predicted(
+def draw_actual_vs_predicted(
     ax: Axes,
     actual: pd.Series,
     predicted: NDArray[np.float64],
@@ -90,13 +90,15 @@ def _draw_actual_vs_predicted(
     _label_axes(ax, title, x_label, y_label, title_size, label_size)
 
 
-def _draw_residuals_vs_predicted(
+def draw_residuals_vs_predicted(
     ax: Axes,
     predicted: NDArray[np.float64],
     errors: pd.Series,
     colour: str,
     title_size: int,
     label_size: int,
+    title: str = constants.RESIDUALS_VS_PREDICTED_TITLE,
+    x_label: str = constants.PREDICTED_PRICE_X_LABEL,
 ) -> None:
     """@brief Draw the residuals against the predictions on an axis.
 
@@ -106,16 +108,11 @@ def _draw_residuals_vs_predicted(
     @param colour Colour of the dots.
     @param title_size Font size of the title.
     @param label_size Font size of the axis labels.
+    @param title Title of the chart.
+    @param x_label Label of the horizontal axis.
     """
     ax.scatter(predicted, errors, c=colour, alpha=constants.RESIDUAL_ALPHA)
-    _label_axes(
-        ax,
-        constants.RESIDUALS_VS_PREDICTED_TITLE,
-        constants.PREDICTED_PRICE_X_LABEL,
-        constants.RESIDUALS_LABEL,
-        title_size,
-        label_size,
-    )
+    _label_axes(ax, title, x_label, constants.RESIDUALS_LABEL, title_size, label_size)
 
 
 def residual_distribution_title(errors: pd.Series, title_prefix: str = "") -> str:
@@ -133,7 +130,7 @@ def residual_distribution_title(errors: pd.Series, title_prefix: str = "") -> st
     )
 
 
-def _draw_residual_distribution(
+def draw_residual_distribution(
     ax: Axes,
     errors: pd.Series,
     colour: str,
@@ -180,8 +177,8 @@ def actual_vs_predicted_figure(
     @return A half transparent scatter plot with a cyan line `y = x`. The
         caller saves and closes it.
     """
-    fig, ax = _single_axes()
-    _draw_actual_vs_predicted(
+    fig, ax = single_axes()
+    draw_actual_vs_predicted(
         ax,
         actual,
         predicted,
@@ -199,22 +196,28 @@ def residuals_vs_predicted_figure(
     predicted: NDArray[np.float64],
     errors: pd.Series,
     colour: str = constants.COLOR_LINEAR_MODEL,
+    title: str = constants.RESIDUALS_VS_PREDICTED_TITLE,
+    x_label: str = constants.PREDICTED_PRICE_X_LABEL,
 ) -> Figure:
     """@brief Draw the residuals against the predicted values.
 
     @param predicted The predicted values.
     @param errors The residuals of the same rows.
     @param colour Colour of the dots.
+    @param title Title of the chart.
+    @param x_label Label of the horizontal axis.
     @return A half transparent scatter plot. The caller saves and closes it.
     """
-    fig, ax = _single_axes()
-    _draw_residuals_vs_predicted(
+    fig, ax = single_axes()
+    draw_residuals_vs_predicted(
         ax,
         predicted,
         errors,
         colour,
         constants.REGRESSION_TITLE_FONT_SIZE,
         constants.REGRESSION_LABEL_FONT_SIZE,
+        title,
+        x_label,
     )
     return fig
 
@@ -232,8 +235,8 @@ def residual_distribution_figure(
     @return A histogram with a KDE whose title carries the skew and the mean.
         The caller saves and closes it.
     """
-    fig, ax = _single_axes()
-    _draw_residual_distribution(
+    fig, ax = single_axes()
+    draw_residual_distribution(
         ax,
         errors,
         colour,
@@ -270,7 +273,7 @@ def regression_panel_figure(data: pd.DataFrame) -> Figure:
         dpi=constants.PICTURE_DPI,
     )
     actual_ax, residual_ax, distribution_ax = axes.ravel()
-    _draw_actual_vs_predicted(
+    draw_actual_vs_predicted(
         actual_ax,
         split.y_train,
         predicted,
@@ -281,10 +284,10 @@ def regression_panel_figure(data: pd.DataFrame) -> Figure:
         size,
         size,
     )
-    _draw_residuals_vs_predicted(
+    draw_residuals_vs_predicted(
         residual_ax, predicted, errors, constants.COLOR_LINEAR_MODEL, size, size
     )
-    _draw_residual_distribution(
+    draw_residual_distribution(
         distribution_ax, errors, constants.COLOR_LINEAR_MODEL, "", size, size
     )
     fig.suptitle(
