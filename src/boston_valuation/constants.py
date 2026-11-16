@@ -54,11 +54,33 @@ EXPECTED_ROWS: Final[int] = 506
 EXPECTED_COLUMNS: Final[int] = 14
 ## @}
 
+## @name Data exploration
+## @{
+PREVIEW_ROWS: Final[int] = 5
+RIVER_NO: Final[int] = 0
+RIVER_YES: Final[int] = 1
+RIVER_VALUES: Final[tuple[int, int]] = (RIVER_NO, RIVER_YES)
+## @}
+
 ## @name Modelling
 ## @{
 TEST_SIZE: Final[float] = 0.2
 RANDOM_STATE: Final[int] = 10
 THOUSANDS: Final[int] = 1000
+## @}
+
+## @name Chart style (descriptive table)
+## @{
+DESCRIPTIVE_TITLE: Final[str] = "Descriptive statistics of the Boston house price data"
+DESCRIPTIVE_TITLE_FONT_SIZE: Final[int] = 16
+DESCRIPTIVE_FIGURE_SIZE: Final[tuple[float, float]] = (13.0, 7.0)
+DESCRIPTIVE_COLUMNS_PER_PANEL: Final[int] = 7
+DESCRIPTIVE_DECIMALS: Final[int] = 2
+DESCRIPTIVE_FONT_SIZE: Final[int] = 12
+DESCRIPTIVE_ROW_SCALE: Final[float] = 1.7
+DESCRIPTIVE_HEADER_COLOR: Final[str] = "#e3f2fd"
+DESCRIPTIVE_HEADER_FONT_WEIGHT: Final[str] = "bold"
+DESCRIPTIVE_EDGE_COLOR: Final[str] = "#90a4ae"
 ## @}
 
 ## @name Chart style (distributions)
