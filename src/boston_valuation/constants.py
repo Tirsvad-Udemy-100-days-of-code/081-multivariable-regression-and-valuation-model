@@ -345,6 +345,30 @@ VALUATION_TABLE_DECIMALS: Final[int] = 2
 VALUATION_TABLE_COLUMN_WIDTHS: Final[tuple[float, float, float]] = (0.45, 0.26, 0.29)
 ## @}
 
+## @name Step 7 picture
+## @{
+SUMMARY_TITLE: Final[str] = (
+    "Out of sample: the log model keeps its lead on unseen homes"
+)
+SUMMARY_SUBTITLE: Final[str] = (
+    "Both scores are lower on the test data than on the training data"
+)
+SUMMARY_GROUP_LABELS: Final[tuple[str, str]] = ("Training data", "Test data")
+SUMMARY_LINEAR_LEGEND: Final[str] = "Linear model on the price"
+SUMMARY_LOG_LEGEND: Final[str] = "Log model on the log price"
+SUMMARY_Y_LABEL: Final[str] = "r-squared"
+SUMMARY_Y_LIMITS: Final[tuple[float, float]] = (0.0, 1.0)
+SUMMARY_SCORE_FORMAT: Final[str] = "{value:.2f}"
+SUMMARY_FIGURE_SIZE: Final[tuple[float, float]] = (9.0, 6.0)
+SUMMARY_TITLE_FONT_SIZE: Final[int] = 15
+SUMMARY_SUBTITLE_FONT_SIZE: Final[int] = 12
+SUMMARY_BAR_WIDTH: Final[float] = 0.36
+SUMMARY_BAR_OFFSET: Final[float] = SUMMARY_BAR_WIDTH / 2
+SUMMARY_BAR_LABEL_FONT_SIZE: Final[int] = 13
+SUMMARY_TICK_FONT_SIZE: Final[int] = 13
+SUMMARY_LEGEND_COLUMNS: Final[int] = 2
+## @}
+
 ## @name Step pictures
 ## @{
 IMAGES_DIR: Final[tuple[str, str]] = ("docs", "images")

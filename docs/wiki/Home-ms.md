@@ -15,5 +15,6 @@ Hari ke-81 *100 Days of Code* Udemy: anda ialah penganalisis di sebuah syarikat 
 | [Langkah 4: Pembahagian dan regresi berbilang pemboleh ubah](Step-4-Regression-ms) | Mengapa kita membahagi data, cara memadankan regresi, dan cara membaca pekali serta reja |
 | [Langkah 5: Penjelmaan log](Step-5-Log-Model-ms) | Bolehkah penjelmaan log harga memberi padanan lebih baik, dan bagaimana kita membandingkan model pada data yang belum dilihat? |
 | [Langkah 6: Menilai sebuah hartanah](Step-6-Valuation-ms) | Bagaimana anda menggunakan model untuk menilai rumah purata dan rumah yang anda huraikan? |
+| [Langkah 7: Pengajaran dan ringkasan](Step-7-Summary-ms) | Apakah yang diajar oleh hari ke-81, dan di mana setiap pengajaran berada dalam kod? |
 
 Soalan tugasan: bolehkah ciri sebuah rumah meramalkan harganya, sejauh mana baiknya model pada rumah yang belum dilihatnya, dan adakah penjelmaan log harga menjadikannya lebih baik?

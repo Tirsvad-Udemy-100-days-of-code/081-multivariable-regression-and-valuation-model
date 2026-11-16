@@ -13,6 +13,8 @@ from boston_valuation.presentation import screenshots
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 MAX_PICTURE_BYTES = 400_000
 MAX_STEP_5_PICTURE_BYTES = 450_000
+MAX_SUMMARY_PICTURE_BYTES = 300_000
+STEP_NUMBERS = tuple(range(8))
 
 
 def _fake_figure() -> Figure:
@@ -184,6 +186,43 @@ def test_step_6_valuation_is_written_as_png(tmp_path: Path) -> None:
     path = screenshots.render_picture(constants.STEP_PICTURES[6], tmp_path)
     assert path.read_bytes().startswith(PNG_SIGNATURE)
     assert path.stat().st_size < MAX_PICTURE_BYTES
+
+
+def test_pictures_include_step_7_summary() -> None:
+    """@brief The summary picture is registered under its picture name."""
+    assert constants.STEP_PICTURES[7] in screenshots.PICTURES
+    assert constants.STEP_PICTURES[7] == "step-7-summary.png"
+    assert screenshots.PICTURES[constants.STEP_PICTURES[7]] is (
+        screenshots.step_7_summary
+    )
+
+
+def test_step_7_summary_draws_four_bars_with_the_scores() -> None:
+    """@brief The step 7 picture is a grouped bar chart of four scores."""
+    fig = screenshots.step_7_summary()
+    try:
+        assert len(fig.axes[0].patches) == 4
+        assert fig.get_suptitle() == constants.SUMMARY_TITLE
+    finally:
+        plt.close(fig)
+
+
+def test_step_7_summary_is_written_as_png(tmp_path: Path) -> None:
+    """@brief The step 7 picture is saved as a real, small PNG."""
+    path = screenshots.render_picture(constants.STEP_PICTURES[7], tmp_path)
+    assert path.read_bytes().startswith(PNG_SIGNATURE)
+    assert path.stat().st_size < MAX_SUMMARY_PICTURE_BYTES
+
+
+def test_every_step_picture_is_registered_and_rendered(tmp_path: Path) -> None:
+    """@brief All eight pictures, step 0 to step 7, are drawn as PNG files."""
+    assert len(constants.STEP_PICTURES) == len(STEP_NUMBERS)
+    assert list(screenshots.PICTURES) == list(constants.STEP_PICTURES)
+    written = screenshots.render_all(tmp_path)
+    assert [path.name for path in written] == list(constants.STEP_PICTURES)
+    for number, path in zip(STEP_NUMBERS, written, strict=True):
+        assert path.name.startswith(f"step-{number}-")
+        assert path.read_bytes().startswith(PNG_SIGNATURE)
 
 
 def test_overview_figure_has_one_axis() -> None:

@@ -8,6 +8,7 @@
 - [Step 4 Regression](Step-4-Regression)
 - [Step 5 Log Model](Step-5-Log-Model)
 - [Step 6 Valuation](Step-6-Valuation)
+- [Step 7 Summary](Step-7-Summary)
 
 **Languages**
 

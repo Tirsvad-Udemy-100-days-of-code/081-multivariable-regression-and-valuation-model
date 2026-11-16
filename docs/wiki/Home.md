@@ -15,5 +15,6 @@ Day 81 of Udemy's *100 Days of Code*: you are an analyst at a real estate develo
 | [Step 4: Split and multivariable regression](Step-4-Regression) | Why we split the data, how to fit a regression, and how to read coefficients and residuals |
 | [Step 5: The log transformation](Step-5-Log-Model) | Can a log transformation of the price give a better fit, and how do we compare models on unseen data? |
 | [Step 6: Valuing a property](Step-6-Valuation) | How do you use the model to value an average house and a house you describe? |
+| [Step 7: Learning points and summary](Step-7-Summary) | What did Day 81 teach, and where does each learning point live in the code? |
 
 The question of the assignment: can the characteristics of a house predict its price, how good is the model on houses it has not seen, and does a log transformation of the price make it better?
